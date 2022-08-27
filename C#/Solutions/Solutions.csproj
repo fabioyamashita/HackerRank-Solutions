@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>mini_max_sum_Solution</StartupObject>
+    <StartupObject>permuting_two_arrays_Solution</StartupObject>
   </PropertyGroup>
 
 </Project>

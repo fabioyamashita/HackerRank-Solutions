@@ -27,16 +27,35 @@ class permuting_two_arrays_Result
 
     public static string twoArrays(int k, List<int> A, List<int> B)
     {
+        var maxValueA = A.Max();
+        var minValueA = A.Min();
 
+        var maxValueB = B.Max();
+        var minValueB = B.Min();
+
+        var maxValueACount = A.Count(a => a == A.Max());
+        var minValueACount = A.Count(a => a == A.Min());
+        
+        var maxValueBCount = B.Count(b => b == B.Max());
+        var minValueBCount = B.Count(b => b == B.Min());
+
+        var condition1 = minValueA + maxValueB >= k && minValueACount <= maxValueBCount;
+        var condition2 = minValueB + maxValueA >= k && minValueBCount <= maxValueACount;
+
+        if (condition1 || condition2)
+        {
+            return "YES";
+        }
+
+        return "NO";
     }
-
 }
 
 class permuting_two_arrays_Solution
 {
     public static void Main(string[] args)
     {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
         int q = Convert.ToInt32(Console.ReadLine().Trim());
 
@@ -54,10 +73,10 @@ class permuting_two_arrays_Solution
 
             string result = permuting_two_arrays_Result.twoArrays(k, A, B);
 
-            textWriter.WriteLine(result);
+            Console.WriteLine(result);
         }
 
-        textWriter.Flush();
-        textWriter.Close();
+        //textWriter.Flush();
+        //textWriter.Close();
     }
 }
