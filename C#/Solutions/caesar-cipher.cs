@@ -34,7 +34,7 @@ class caesar_Cipher_Result
 
             var oldIndex = alphabet.IndexOf(s[i]);
 
-            if (originalAlphabet.Contains(s[i], StringComparison.OrdinalIgnoreCase))
+            if (alphabet.Contains(s[i]))
             {
                 if (rotationFactor + oldIndex > countAlphabetLength - 1)
                 {
