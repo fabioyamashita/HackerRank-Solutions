@@ -25,12 +25,12 @@ class gridChallengeResult
             grid[i] = String.Concat(grid[i].OrderBy(x => x));
         }
 
-        for (int i = 1; i < grid.Count; i++)
+        for (int row = 1; row < grid.Count; row++)
         {
-            for (int j = 0; j < grid[i].Count(); j++)
+            for (int column = 0; column < grid[row].Count(); column++)
             {
-                previousIndexAlphabet = alphabet.IndexOf(grid[i - 1][j]);
-                currentIndexAlphabet = alphabet.IndexOf(grid[i][j]);
+                previousIndexAlphabet = alphabet.IndexOf(grid[row - 1][column]);
+                currentIndexAlphabet = alphabet.IndexOf(grid[row][column]);
 
                 if (previousIndexAlphabet > currentIndexAlphabet)
                     return "NO";
