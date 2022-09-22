@@ -1,3 +1,3 @@
-# HackerRank-Solutions
+# HackerRank Solutions
 
 HackerRank - Solutions in C#
