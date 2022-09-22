@@ -68,13 +68,12 @@ class sumXor_Result
 
         // CONCLUSION
         // number of cases that satisfies n + x = n ^ x:
-        // Math.Pow(2, number of zeros bitwise)
+        // Math.Pow(2, number of zeros from binary representation)
 
         if (n == 0) return 1;
 
         var zeros = Convert.ToString(n, 2).Count(b => b == '0');
         var cases = (long)Math.Pow(2, zeros);
-
         return cases;
     }
 
