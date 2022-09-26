@@ -78,12 +78,10 @@ class bomberMan_Result
 
         if (n == 1)
             resultGridChar = originalRoundGridChar;
-        else if (n == 3)
+        else if (n == 3 || n % 4 == 3)
             resultGridChar = resultGridPattern1;
         else if (n % 4 == 1)
             resultGridChar = resultGridPattern2;
-        else if (n % 4 == 3)
-            resultGridChar = resultGridPattern1;
         else
             resultGridChar = fullBombsGridChar;
 
