@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>permuting_two_arrays_Solution</StartupObject>
+    <StartupObject>Solutions.test</StartupObject>
   </PropertyGroup>
 
 </Project>
