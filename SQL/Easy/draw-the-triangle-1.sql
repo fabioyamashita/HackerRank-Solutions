@@ -1,0 +1,7 @@
+DECLARE @ROWS INT = 20;
+
+WHILE @ROWS >= 1
+BEGIN
+    SELECT REPLICATE('* ', @ROWS);
+    SET @ROWS = @ROWS - 1;
+END;
